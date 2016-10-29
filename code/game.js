@@ -630,10 +630,13 @@ function runGame(plans, Display) {
                 function startOver(event) {
                     if (event.keyCode == 13) {
                         removeEventListener("keydown", startOver);
-                        var canvas = document.getElementById("particles");
-                        canvas.style.display = "none";
+                        var winScreen = document.getElementById("winScreen");
+                        winScreen.style.display = "none";
                         startLevel(0);
                     }
+
+                    var winScreen = document.getElementById("winScreen");
+                    winScreen.style.display = "block";
                 }
                 addEventListener("keydown", startOver);
             }
