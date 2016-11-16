@@ -29,7 +29,16 @@ var GAME_LEVELS = [
         "                             x!      !x       !!!!!!!!!!!!!!!     xxxxxxxx      ",
         "                             x!      !x                                         ",
         "                             xxxxxxxxxx                                         "
-    ]
+    ],
+  [
+      "                                                                                                              "
+      "                                                                                                              "
+      "                                                                                                              "
+      "                                                                                                              "
+      "                                   o                                                                          "
+      "               @               d                                                                              "
+      " xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                                                   "
+      " x                                        x                                                                   "
 ];
 
 if (typeof module != "undefined" && module.exports)
