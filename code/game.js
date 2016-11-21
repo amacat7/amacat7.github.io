@@ -1,3 +1,10 @@
+/**
+Amanda Jones
+DIG 2500
+Professor Shbeeb
+Final Project
+*/
+
 var overworld;
 var death;
 /**
