@@ -1,0 +1,60 @@
+<!doctype html>
+<link rel="stylesheet" href="css/styles.css">
+<script src="code/game.js"></script>
+<script src="code/levels.js"></script>
+<script>
+    // Mute a singular HTML5 element
+    function muteMe(elem) {
+        elem.muted = true;
+    }
+
+    // Mute a singular HTML5 element
+    function unMuteMe(elem) {
+        elem.muted = false;
+    }
+
+    // Try to mute all video and audio elements on the page
+    function mutePage() {
+        var videos = document.querySelectorAll("video"),
+            audios = document.querySelectorAll("audio");
+
+        [].forEach.call(videos, function(video) { muteMe(video); });
+        [].forEach.call(audios, function(audio) { muteMe(audio); });
+        document.getElementById("mute").style.display = "none";
+        document.getElementById("unmute").style.display = "block";
+    }
+
+    function unMutePage() {
+        var videos = document.querySelectorAll("video"),
+            audios = document.querySelectorAll("audio");
+
+        [].forEach.call(videos, function(video) { unMuteMe(video); });
+        [].forEach.call(audios, function(audio) { unMuteMe(audio); });
+        document.getElementById("mute").style.display = "block";
+        document.getElementById("unmute").style.display = "none";
+    }
+</script>
+<body>
+<!--This song is by the artist Pogo-->
+<audio id="overworld" src="sounds/overworld.mp3"></audio>
+<!--This is Trump-->
+<audio id="death" src="sounds/death.wav"></audio>
+<div id="container">
+    <h1>Trumpster</h1>
+    <h2>HOW TO PLAY!</h2>
+    <p>This is the best game. Tremendous game! You know it, I know it, everyone knows it. I mean look at this game. Have you ever seen anything like this before? I have tons of people, they come up to me, they say, Trump, this is the best game. No one has ever gotten that kind of endorsement. I mean, just look at this game. It's really just the best.</p>
+    <p>A lot of people ask me, Trump, how do you play the game? That's a great question, and I mean we are going to talk about that. Playing the game and knowing the rules is what it's all about. I mean you can't play if you don't know, but we will talk about it.</p>
+    <p>A friend of mine, really great friend, told me, Trump, just press the space bar and the arrow keys. Tremendous design. You really can't get any better than that.</p>
+    <img src="img/music_enabled.png" id="mute" class="mute" onclick="mutePage()" />
+    <img src="img/music_disabled.png" id="unmute" class="mute" style="display:none;" onclick="unMutePage()" />
+</div>
+<div id="startScreen" class="startScreen just-center"></div>
+<div id="test">
+    <script>
+        runGame(GAME_LEVELS, DOMDisplay);
+    </script>
+</div>
+<div id="winScreen" class="winScreen"></div>
+<div id="loseScreen" class="loseScreen"></div>
+<div id="levelScreen" class="levelScreen"></div>
+</body>
